@@ -427,10 +427,7 @@ controller.create = async (req, res) => {
                     return error;
                 });
         }
-     
-       
     }
-    
 }
 
 //Login

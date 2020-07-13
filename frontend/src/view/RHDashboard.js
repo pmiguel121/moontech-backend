@@ -89,7 +89,7 @@ class RHDashboard extends React.Component {
 
     Load_ContagemAtivos() {
 
-        const url = "https://moontech-backend.herokuapp.com//projeto/ContagemAtivos"
+        const url = "https://moontech-backend.herokuapp.com/projeto/ContagemAtivos"
         axios.get(url).then(res => {
 
 
@@ -108,7 +108,7 @@ class RHDashboard extends React.Component {
     }
     Load_ContagemConcluidos() {
 
-        const url = "https://moontech-backend.herokuapp.com//projeto/ContagemConcluidos"
+        const url = "https://moontech-backend.herokuapp.com/projeto/ContagemConcluidos"
         axios.get(url).then(res => {
 
 

@@ -9,6 +9,7 @@ const Role = require('../middleware').Role
 //autenticações
 //const middleware = require('../middleware');
 const UtilizadorController = require("../controllers/utilizadorcontroller");
+
 const Utilizador = require('../models/utilizador');
 
 router.post('/login',UtilizadorController.login);

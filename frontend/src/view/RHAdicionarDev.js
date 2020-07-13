@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const HerokuURL = "https://moontechv2.herokuapp.com";
+const HerokuURL = "https://moontech-backend.herokuapp.com";
 
 //IMPORT CHIPS
-import Chip from '@material-ui/core/Chip';
+//import Chip from '@material-ui/core/Chip';
 //import authService from './auth.service';
 
-import Dropzone from 'react-dropzone';
-import { DropContainer, UploadMessage } from "./styles";
+// import Dropzone from 'react-dropzone';
+// import { DropContainer, UploadMessage } from "./styles";
 
 
 //VALIDAÇOES
@@ -690,16 +690,16 @@ class RHAdicionarDev extends React.Component {
 
 
 
-    renderDragMessage = (isDragActive, isDragReject) => {
-        if (!isDragActive) {
-            return <UploadMessage>Arraste a foto</UploadMessage>
-        }
+    // renderDragMessage = (isDragActive, isDragReject) => {
+    //     if (!isDragActive) {
+    //         return <UploadMessage>Arraste a foto</UploadMessage>
+    //     }
 
-        if (isDragReject) {
-            return <UploadMessage type="error">Arquivo não suportada</UploadMessage>
-        }
-        return <UploadMessage type="success">Solte a foto</UploadMessage>
-    };
+    //     if (isDragReject) {
+    //         return <UploadMessage type="error">Arquivo não suportada</UploadMessage>
+    //     }
+    //     return <UploadMessage type="success">Solte a foto</UploadMessage>
+    // };
 
     //teste fotos paiva é burro
     fileSelectedHandler = event => {
@@ -1185,7 +1185,7 @@ class RHAdicionarDev extends React.Component {
                                                         <label> Fotografia </label>
                                                     </div>
                                                     <div className="col-xs-1 ">
-                                                        <Dropzone accept="image/*" onDropAccepted={onUpload}>
+                                                        {/* <Dropzone accept="image/*" onDropAccepted={onUpload}>
                                                             {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
                                                                 <DropContainer
                                                                     {...getRootProps()}
@@ -1197,9 +1197,9 @@ class RHAdicionarDev extends React.Component {
                                                                     {this.renderDragMessage(isDragActive, isDragReject)}
                                                                 </DropContainer>
                                                             )}
-                                                        </Dropzone>
+                                                        </Dropzone> */}
 
-                                                        {/* <input value={this.state.foto} onChange={(value) => this.setState({ foto: value.target.value })} type="file" className="texto font-weight-light" multiple /> */}
+                                                        <input value={this.state.foto} onChange={(value) => this.setState({ foto: value.target.value })} type="file" className="texto font-weight-light" multiple />
 
                                                         {/* <input onChange={this.fileSelectedHandler} type="file" className="texto font-weight-light"/>
                                                     <button onClick={this.fileUploadHandler}>Upload</button> */}
@@ -1287,7 +1287,7 @@ class RHAdicionarDev extends React.Component {
                                                                 color: "white"
                                                             };
 
-                                                            return <Chip tabIndex={index1 + 1} label={name} onDelete={this.handleDelete1.bind(this, index1)} style={estilochips1} />
+                                                            return <input tabIndex={index1 + 1} label={name} onDelete={this.handleDelete1.bind(this, index1)} style={estilochips1} />
                                                         }, this)}
                                                     </div>
                                                 </div>
@@ -1343,7 +1343,7 @@ class RHAdicionarDev extends React.Component {
                                                                 color: "white"
                                                             };
 
-                                                            return <Chip tabIndex={index + 1} label={name} onDelete={this.handleDelete.bind(this, index)} style={estilochips} />
+                                                            return <input tabIndex={index + 1} label={name} onDelete={this.handleDelete.bind(this, index)} style={estilochips} />
                                                         }, this)}
                                                     </div>
 

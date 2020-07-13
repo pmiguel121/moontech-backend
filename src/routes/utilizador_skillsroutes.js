@@ -8,6 +8,7 @@ router.get('/list', utilizador_skillscontrollers.list);
 router.get('/get/:id', utilizador_skillscontrollers.get);
 
 router.post('/createTec', utilizador_skillscontrollers.createTec);
+
 router.post('/createHum', utilizador_skillscontrollers.createHum);
 
 router.put('/update/:id', utilizador_skillscontrollers.update);

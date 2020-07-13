@@ -3,8 +3,8 @@ const router =express.Router();
 const checkToken = require('../middleware').checkToken
 const authorize = require('../middleware').authorize
 const Role = require('../middleware').Role
-const multer = require('multer');
-const multerconfig = require('../config/multer');
+// const multer = require('multer');
+// const multerconfig = require('../config/multer');
 
 //autenticações
 //const middleware = require('../middleware');
@@ -37,7 +37,7 @@ router.get('/get/:id', UtilizadorController.get);
 
 // router.post('/posts', multer(multerconfig).single('file') 
 
-router.post('/create',  multer(multerconfig).single('file'), UtilizadorController.create);
+router.post('/create', UtilizadorController.create);
 
 router.put('/update/:id' , UtilizadorController.update);
 
@@ -48,8 +48,6 @@ router.delete('/delete/:id',  checkToken, authorize([Role.RH]), UtilizadorContro
 router.get('/teste/:id', UtilizadorController.get);
 
 router.get('/ContarDevs', UtilizadorController.ContarDevs); 
-
-
 
 
 module.exports = router;

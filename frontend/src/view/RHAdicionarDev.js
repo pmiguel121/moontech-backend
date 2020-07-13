@@ -2,11 +2,10 @@ import React, { } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-
-const HerokuURL = "https://moontech-backend.herokuapp.com";
-
 //IMPORT CHIPS
 import Chip from '@material-ui/core/Chip';
+
+const HerokuURL = "https://moontech-backend.herokuapp.com";
 //import authService from './auth.service';
 
 // import Dropzone from 'react-dropzone';
@@ -1352,7 +1351,6 @@ class RHAdicionarDev extends React.Component {
                                                         <button type="Reset" className="btnoutlinelaranja " onClick={this.resetForm}>Limpar</button>
 
                                                         <button onClick={() => this.sendSave()} className='btnlaranjanormal' type='submit' disabled={!this.state.formValid}>Adicionar</button>
-
                                                     </div>
                                                 </div>
                                             </div>

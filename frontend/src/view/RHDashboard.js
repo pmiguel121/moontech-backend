@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const HerokuURL = "https://moontech-backend.herokuapp.com/";
+// const HerokuURL = "https://moontech-backend.herokuapp.com/";
 
 var Chart = require("react-google-charts").Chart;
 
@@ -145,7 +145,7 @@ class RHDashboard extends React.Component {
             });
     }
     Load_ContarSkills() {
-        const url = HerokuURL + "/skill/ContarSkills"
+        const url = "https://moontech-backend.herokuapp.com/skill/ContarSkills"
         axios.get(url).then(res => {
 
 

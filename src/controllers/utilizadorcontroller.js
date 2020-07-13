@@ -322,6 +322,10 @@ controller.create = async (req, res) => {
             .then(function (competencias) {
                 return competencias;
             })
+            .catch(error => {
+                console.log('Erro:' + error);
+                return error;
+            });
 
         if (competencias == 0) {
             
@@ -334,6 +338,11 @@ controller.create = async (req, res) => {
                 .then(function (competencias_) {
                     return competencias_;
                 })
+
+                .catch(error => {
+                    console.log('Erro:' + error);
+                    return error;
+                });
             
    
              id_conpetenciatecnica = competencias_.id_skill;
@@ -358,6 +367,7 @@ controller.create = async (req, res) => {
                     return error;
                 });
         }
+
      
        
     }
@@ -373,6 +383,10 @@ controller.create = async (req, res) => {
             .then(function (competencias) {
                 return competencias;
             })
+            .catch(error => {
+                console.log('Erro:' + error);
+                return error;
+            });
 
         if (competencias == 0) {
             
@@ -385,6 +399,10 @@ controller.create = async (req, res) => {
                 .then(function (competencias_) {
                     return competencias_;
                 })
+                .catch(error => {
+                    console.log('Erro:' + error);
+                    return error;
+                });
             
    
              id_conpetenciahumanas = competencias_.id_skill;

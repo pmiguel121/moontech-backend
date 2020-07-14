@@ -46,7 +46,7 @@ var Utilizador = sequelize.define('utilizador', {
 
     });
 
-Utilizador((utilizador, options) => {
+Utilizador.beforeCreate((utilizador, options) => {
     if (!utilizador.fotourl) {
         utilizador.fotourl = `${process.env.APP_URL}/files/${utilizador.keyfoto}`
     }

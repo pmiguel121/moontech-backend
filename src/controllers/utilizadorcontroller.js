@@ -519,7 +519,6 @@ controller.update = async (req, res) => {
     })
     
     .catch(() => {
-     
         return res.json({ success: false, data: data, message: "Erro" })
     });
     

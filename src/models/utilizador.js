@@ -46,19 +46,19 @@ var Utilizador = sequelize.define('utilizador', {
 
     });
 
-Utilizador.beforeCreate((utilizador, options) => {
-    if (!utilizador.fotourl) {
-        utilizador.fotourl = `${process.env.APP_URL}/files/${utilizador.keyfoto}`
-    }
-    return bcrypt.hash(utilizador.password, 10)
+// Utilizador((utilizador, options) => {
+//     if (!utilizador.fotourl) {
+//         utilizador.fotourl = `${process.env.APP_URL}/files/${utilizador.keyfoto}`
+//     }
+//     return bcrypt.hash(utilizador.password, 10)
 
-        .then(hash => {
-            utilizador.password = hash;
-        })
-        .catch(err => {
-            throw new Error();
-        });
-});
+//         .then(hash => {
+//             utilizador.password = hash;
+//         })
+//         .catch(err => {
+//             throw new Error();
+//         });
+// });
 
 
 Utilizador.beforeCreate((utilizador, options) => {

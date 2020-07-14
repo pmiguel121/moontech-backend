@@ -509,7 +509,7 @@ controller.update = async (req, res) => {
     // parameter get id
     const { id } = req.params;
     // parameter POST
-    const { nome, sigla, data_inicio, data_fim, nr_elementos, disponibilidade, descricao, estado_projeto  } = req.body;
+    const { nome, sigla, data_inicio, data_fim, disponibilidade, descricao, estado_projeto  } = req.body;
     // Update data
 
     const data = await Projeto.update({
@@ -517,7 +517,7 @@ controller.update = async (req, res) => {
             sigla:sigla ,
             data_inicio:data_inicio,
             data_fim: data_fim,
-            nr_elementos:nr_elementos,
+            //nr_elementos:nr_elementos,
             disponibilidade:disponibilidade,
             descricao:descricao,
             estado_projeto: estado_projeto,

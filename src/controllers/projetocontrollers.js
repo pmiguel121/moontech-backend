@@ -406,11 +406,21 @@ controller.create = async (req, res) => {
 
     const { nome, sigla, data_inicio, data_fim, nr_elementos, disponibilidade, hora_extra, reunircliente,  descricao, id_teamleader } = req.body;
 
-   
-   
+    console.log(nome)
+    console.log(sigla)
+    console.log(data_inicio)
+    console.log(data_fim)
+    console.log(nr_elementos)
+    console.log(disponibilidade)
+    console.log(hora_extra)
+    console.log(reunircliente)
+    console.log(descricao)
+    console.log(id_teamleader)
+
     //primeiro procuro os dados do utilizador para o por na tabela no fim
      const lider = await Utilizador.findOne({
           where:{ "$id_utilizador$": id_teamleader }
+
      })
 
      .then(function (lider) {
